@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="/">Stock Data App</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Welcome to the Stock Data App</h2>
+        <form method="POST">
+            <label for="symbol">Symbol:</label><br>
+            <input type="text" id="symbol" name="symbol" required><br>
+            <label for="start">Start Date:</label><br>
+            <input type="date" id="start" name="start" required><br>
+            <label for="end">End Date:</label><br>
+            <input type="date" id="end" name="end" required><br>
+            <label for="data_type">Data Type:</label><br>
+            <select id="data_type" name="data_type" required>
+                <option value="Daily">Daily</option>
+                <option value="Weekly">Weekly</option>
+                <option value="Monthly">Monthly</option>
+            </select><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Stock Data App</p>
+        </div>
+    </footer>
+</body>
+</html>

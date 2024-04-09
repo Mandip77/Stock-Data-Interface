@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="/">Stock Data App</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Stock Data Results</h2>
+        {% for table in tables %}
+            {{ table|safe }}
+        {% endfor %}
+        <a href="/">Back</a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Stock Data App</p>
+        </div>
+    </footer>
+</body>
+</html>
